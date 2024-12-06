@@ -1,0 +1,11 @@
+<div class="container w-25 border shadow mt-5">
+  <h1 class="text-center text-primary"> New Store!</h1>
+<%= simple_form_for @store do |s| %>
+<%=s.input :name  %>
+<%=s.association :category %>
+<%=s.input :delivery_price  %>
+<%=s.input :delivery_time %>
+<%=s.input :payment_type, collection: ["Credit", "Debit", "Paypal", "Cash","MercadoPago", "All"]  %>
+<%=s.submit class: "btn btn-primary"  %>
+<% end %>
+</div>

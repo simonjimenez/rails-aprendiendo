@@ -1,0 +1,7 @@
+<%=@store.name%>
+<%@store.products.each do |p| %>
+<%= p.name %>
+<%= p.price %>
+<%= p.description %>
+<%= image_tag p.photo if p.photo.attached? %>
+<% end %>
